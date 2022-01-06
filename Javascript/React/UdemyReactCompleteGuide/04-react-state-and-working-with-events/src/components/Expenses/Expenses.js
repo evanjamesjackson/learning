@@ -1,6 +1,7 @@
 import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
 
+// Dummy data
 function Expenses() {
   const expenses = [
     {
