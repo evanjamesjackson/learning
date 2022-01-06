@@ -7,7 +7,7 @@ const NewExpense = (props) => {
       ...enteredExpenseData,
       id: Math.random().toString(), // not truly unique but good enough for this example
     };
-    props.onAddNewExpense(expenseData);
+    props.onAddNewExpense(expenseData); // child-to-parent communication
     console.log(expenseData);
   };
 
