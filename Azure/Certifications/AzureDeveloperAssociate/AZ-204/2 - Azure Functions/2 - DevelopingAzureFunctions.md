@@ -1,0 +1,9 @@
+- Functions apps contain two components - the code and the config (function.json for "scripty" languages)
+  - function.json defines the triggers, bindings and other configurations
+  - bindings are defined in a JSON array; each binding contains a type (e.g. queueTrigger), a direction (in to indicate that the function receives input, out if it sends data out), and a name used to bind data in the function
+- each function can only contain a single trigger
+- a Function app provides the execution context; it is the unit of deployment/management, and as such is comprised of one more more functions that are managed, deployed and scaled together
+- folder structure of a Functions app will vary depending on language - but generally it will contain a host.json file at the root, and a folder for each function, each containing a function.json file
+- it is possible to test Functions locally
+- C# and Java use attributes/annotations to configure triggers/bindings
+-
