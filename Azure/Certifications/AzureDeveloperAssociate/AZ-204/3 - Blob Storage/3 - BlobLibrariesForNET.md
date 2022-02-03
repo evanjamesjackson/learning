@@ -1,0 +1,9 @@
+- Several .NET classes available for working with Azure Storage:
+    - BlobClient allows you to manipulate blobs
+    - BlobClientOptions provides configuration options when connecting to Storage
+    - BlobContainerClient allows you to manipulate containers and their blobs
+    - BlobServiceClient allows you to manipulate Storage service resources
+    - BlobUriBuilder can modify the contents of a Uri instance to point to different Storage resources (accounts, containers, blobs)
+- Blob containers support system properties and user-defined metadata (key-value pairs)
+    - Custom metadata is represented as HTTP headers when creating a resource, or creates a property on an existing resource
+    - Some standard HTTP properties on containers/blobs include 'Last-Modified', 'Content-Length', 'Cache-Control', etc.
