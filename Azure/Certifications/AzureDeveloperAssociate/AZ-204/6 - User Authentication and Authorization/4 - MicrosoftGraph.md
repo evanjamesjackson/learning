@@ -1,0 +1,9 @@
+- Microsoft Graph provides an API for Microsoft 365
+- Graph "Connectors" deliver data data external to Azure into Microsoft Graph services
+- The Microsoft Graph REST API can be used to access Microsoft 365 resources
+- some best practices when using Graph:
+    - use an OAuth 2.0 flow to acquire an access token before requesting resources from Graph
+    - use least privelege
+    - use the correct permission type based on the scenario (i.e. delegated or application permissions)
+    - handle responses effectively (e.g. pagination, evolving enumerations)
+    - don't store data locally unless really necessary
