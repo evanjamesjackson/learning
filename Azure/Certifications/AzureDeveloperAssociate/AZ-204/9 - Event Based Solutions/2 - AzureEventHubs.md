@@ -1,0 +1,18 @@
+- Azure Event Hubs is a big data streaming platform and event ingestion service
+- Azure Event Hubs represent an "event instigator" frontdoor that sits between event publishers and event consumers, thus decoupling the two
+- Key concepts in Event Hubs:
+    - An **Event Hub client** is the primary interface for developers interacting with the Event Hubs library
+    - An **Event Hub producer** is a type of client that serves as a source of data
+    - An **Event Hub consumer** is a type of client which reads information from the Event Hub
+    - A **partition** is an ordered sequence of events that enables parallelism for event consumers (i.e. each consumer reads a specific partition or subset of the message stream)
+    - A **consumer group** is a logical grouping of event consumers
+    - **Event receivers** are any entity that reads event data from the Hub
+- Event Hubs Capture automatically streams data to an Azure Blob storage or Azure Data Lake Storage account
+- `EventProcessorClient` is a .NET class that allows you to read data from an Event Hub
+- when designing a consumer application in a distributed environment, the following should be taken into consideration:
+    - scaling - multiple consumers should be running, each reading from Event Hub partitions
+    - load balancing - configure consumers to rebalance the number of partitions they own when load increases
+    - seamless resume on failures - configure consumers to pick up partitions of others if those consumers encounter an error
+    - checkpointing - mark the point in the partition of the last successful read, so that other consumers can continue from there if the consumer reading that partition fails
+    - thread safety and synchronization
+- Access to Event Hubs can be controlled using SAS, managed identities, and Active Directory
